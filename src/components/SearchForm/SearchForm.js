@@ -1,13 +1,15 @@
-import React from "react"
+import React from 'react';
+import './SearchForm.css';
 
 const SearchForm = ({search}) => {
     return (
-        <div className="searchbar text-center input-group">
+        <div className=" text-center input-group">
+            <label className="form-label"> Search: </label>
             <input 
                 type="text" 
                 className="form-control" 
                 name="search" 
-                placeholder="Search Employee" 
+                placeholder="Enter Employee Name" 
                 onChange={search}
             />
         </div> 

@@ -1,6 +1,6 @@
 const Table = ({ results, sortByName, searchInput }) => {
     return (
-      <table className="table text-center">
+      <table>
         <thead>
           <tr>
             <th scope="col">Image</th>
