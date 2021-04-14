@@ -1,32 +1,29 @@
-import React from 'react'
-
-function Table(props){
+const Table = ({ results, sortByName, searchInput }) => {
     return (
-        <table style={{width: "100%"}}>
-            <thead>
-                <tr>
-                <th>Image</th>
-                <th>Name</th>
-                <th>Phone Number</th>
-                <th>Email </th>
-                <th>Location</th>
-                </tr>
-            </thead>
-            <tbody>
-                {props.list.map(user => 
-                <tr style={{borderTop: "2px solid gray"}}>
-                <td>
-                    <img src={user.picture.thumbnail} alt="profile"/>
-                </td>
-                <td>{user.name.first} {user.name.last}</td>
-                <td>{user.phone}</td>
-                <td>{user.email}</td>
-                <td>{user.location.state}, {user.location.country}</td>
-                </tr>
-                )}
-            </tbody>
-        </table>
-    )
-}
-
-export default Table
+      <table className="table text-center">
+        <thead>
+          <tr>
+            <th scope="col">Image</th>
+            <th scope="col" onClick={()=>sortByName("name.first")}>Name</th>
+            <th scope="col" className="email">Email</th>
+            <th scope="col" onClick={()=>sortByName("location.city")}className="city">location</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+            {results.filter(result=> `${result.name.first}${result.name.last}`.toLowerCase().startsWith(searchInput)).map(result=>( 
+            <tr key={result.id.value}>
+              <td><img src={result.picture.thumbnail} alt=""/> </td>
+              <td>{result.name.first} {result.name.last}</td>
+              <td className="email">{result.email}</td>
+              <td className="city">{result.location.city}</td>
+          </tr>
+            ))}
+          
+        </tbody>
+      </table>
+    );
+  };
+  
+  export default Table;
+  
