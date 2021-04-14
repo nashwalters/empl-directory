@@ -32,7 +32,7 @@ The user is able to Search for employees by first name as well as filter employe
 
 ### Deployment
 
-Click [Employee Directory]() to deploy application.
+Click [Employee Directory](https://nashwalters.github.io/empl-directory/) to deploy application.
 
 ### Screenshot
 
