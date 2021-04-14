@@ -4,12 +4,14 @@ import Table from "../Table/Table";
 import API from "../../utils/API";
 import _get from "lodash/get";
 
+
 class MainContianer extends Component {
   state = {
     results: [],
     toggle: true,
     searchInput: "",
   };
+ 
   
   renderEmplList = () => {
     API.getUsers()
@@ -33,7 +35,6 @@ class MainContianer extends Component {
   };
 
   searchFilter = (event) => {
-    // const newEmployeeList = this.state.results.filter(employee => employee.name.first === input)
     this.setState({ searchInput: event.target.value.toLowerCase() });
   };
 
@@ -44,7 +45,6 @@ class MainContianer extends Component {
         <Table
           searchInput={this.state.searchInput}
           results={this.state.results}
-          handleDelete={this.handleDelete}
           sortByName={this.sortByName}
         />
       </div>

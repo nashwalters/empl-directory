@@ -3,7 +3,7 @@ import './SearchForm.css';
 
 const SearchForm = ({search}) => {
     return (
-        <div className=" text-center input-group">
+        <form className=" text-center input-group">
             <label className="form-label"> Search: </label>
             <input 
                 type="text" 
@@ -12,7 +12,8 @@ const SearchForm = ({search}) => {
                 placeholder="Enter Employee Name" 
                 onChange={search}
             />
-        </div> 
+
+        </form>         
     );
 }
  
