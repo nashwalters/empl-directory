@@ -5,7 +5,7 @@ function Header(){
     return (
         <header className="header">
             <h1>Employee Directory</h1>
-            <p>(Sort Employees by Name, city or Province)</p>
+            <p>(Sort Employees by Name, City or Province)</p>
         </header>
     )
 }
