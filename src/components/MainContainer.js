@@ -1,5 +1,5 @@
 import { Component } from "react";
-import Search from "./Search";
+import Search from "./SearchForm";
 import Table from "./Table";
 import API from "../utils/API";
 import _get from "lodash/get";
