@@ -1,7 +1,7 @@
 import { Component } from "react";
-import Search from "./SearchForm/SearchForm";
-import Table from "./Table";
-import API from "../utils/API";
+import Search from "../SearchForm/SearchForm";
+import Table from "../Table/Table";
+import API from "../../utils/API";
 import _get from "lodash/get";
 
 class MainContianer extends Component {
