@@ -24,6 +24,7 @@ This application is an employee directory made with React. The user is able to v
 
 ## Technology
 [Node.js](https://nodejs.org/en/)
+
 [React](https://reactjs.org/)
 
 ## Usage
