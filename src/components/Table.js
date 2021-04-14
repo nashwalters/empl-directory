@@ -11,14 +11,17 @@ const Table = ({ results, sortByName, searchInput }) => {
           </tr>
         </thead>
         <tbody>
-            {results.filter(result=> `${result.name.first}${result.name.last}`.toLowerCase().startsWith(searchInput)).map(result=>( 
-            <tr key={result.id.value}>
-              <td><img src={result.picture.thumbnail} alt=""/> </td>
-              <td>{result.name.first} {result.name.last}</td>
-              <td className="email">{result.email}</td>
-              <td className="city">{result.location.city}</td>
-          </tr>
-            ))}
+            
+        {results.filter(result=> `${result.name.first}${result.name.last}`.toLowerCase().startsWith(searchInput)).map(result=>( 
+          <tr key={result.id.value}>
+            <td><img src={result.picture.thumbnail} alt=""/> </td>
+            <td>{result.name.first} {result.name.last}</td>
+            <td className="email">{result.email}</td>
+            <td className="city">{result.location.city}</td>
+           
+        </tr>
+          ))}
+        
           
         </tbody>
       </table>

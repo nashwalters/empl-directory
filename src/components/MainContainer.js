@@ -12,7 +12,7 @@ class MainContianer extends Component {
   };
   
   renderEmplList = () => {
-    API.search()
+    API.getUsers()
       .then((res) => {
         this.setState({ results: res.data.results });
       })

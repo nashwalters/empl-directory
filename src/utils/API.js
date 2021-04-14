@@ -4,7 +4,7 @@ const BASEURL = "https://randomuser.me/api/?results=100&nat=ca";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
-  search: function () {
+  getUsers: function () {
     return axios.get(BASEURL);
   },
 };
